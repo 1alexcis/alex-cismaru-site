@@ -12,8 +12,7 @@ export function seededRandom(seed = 73) {
   };
 }
 
-export function makeBodies(width, height, random = Math.random) {
-  const count = width < 400 ? 10 : 13;
+export function makeBodies(width, height, random = Math.random, count = width < 400 ? 10 : 13) {
   return Array.from({ length: count }, (_, i) => {
     const angle = random() * Math.PI * 2;
     const radius = (i % 4 === 0 ? 39 : 17 + random() * 15) * Math.min(1, width / 440);
@@ -54,10 +53,10 @@ export function keepOutside(body, obstacle, width, height) {
 }
 
 export function makeMoatBodies(width, height, obstacle, random = Math.random) {
-  const count = width > 1000 ? 8 : width > 650 ? 6 : 4;
+  const count = width > 1000 ? 16 : width > 650 ? 12 : 8;
   const gutter = Math.min(obstacle.left, width - obstacle.right);
   const maxRadius = Math.max(3, Math.min(30, (gutter - 6) / 2));
-  const bodies = makeBodies(width, height, random).slice(0, count);
+  const bodies = makeBodies(width, height, random, count);
   for (const [i, body] of bodies.entries()) {
     body.r = maxRadius * (0.55 + random() * 0.45);
     // Start on alternating sides so a narrow viewport has a balanced perimeter.
