@@ -1,4 +1,4 @@
-import { makeMoatBodies, stepWorld, keepOutside, seededRandom } from './physics.mjs?v=ff76b54c802c';
+import { makeMoatBodies, stepWorld, keepOutside, seededRandom } from './physics.mjs?v=5630aacc7cc9';
 
 export function initField(element) {
   const canvas = element.querySelector('canvas');

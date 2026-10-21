@@ -44,6 +44,12 @@ main{flex:1}
 .interest h2{font-size:28px;line-height:1.3;letter-spacing:-.8px;font-weight:500;margin-bottom:14px}
 .interest p:not(.section-number){color:var(--muted);font-size:16px;line-height:1.8;max-width:500px}
 .interest strong{font-weight:500;color:var(--ink)}
+.reading-list{max-width:680px}
+.reading-note{padding:30px 0 34px;border-top:1px solid var(--line)}
+.reading-note:last-child{padding-bottom:0}
+.note-source{color:#8595af;font-size:11px;margin-bottom:12px}
+.reading-note h2{font-size:26px;line-height:1.3;letter-spacing:-.7px;font-weight:500;margin-bottom:15px}
+.reading-note>p:not(.note-source){color:var(--muted);font-size:16px;line-height:1.85}
 .about-layout{display:grid;grid-template-columns:240px 1fr;gap:50px;align-items:start}
 .portrait{display:block;width:100%;height:auto;border-radius:2px}
 .about-copy p{color:var(--muted);font-size:16px;line-height:1.85}
@@ -74,7 +80,7 @@ body[data-page=home] .site-footer{margin-top:0}
   .site-header{gap:16px}
   .wordmark{font-size:17px}
   .surname{display:none}
-  nav{font-size:11px;gap:18px}
+  nav{font-size:11px;gap:16px}
   .home-intro{padding:84px 0 72px}
   .eyebrow{font-size:9px;letter-spacing:1.5px}
   .home-intro h1{font-size:clamp(66px,16vw,96px);letter-spacing:-4px;margin:26px 0 28px}
@@ -95,9 +101,11 @@ body[data-page=home] .site-footer{margin-top:0}
   .about-layout{grid-template-columns:1fr;gap:30px}
   .portrait{max-width:220px}
   .about-copy p{font-size:15px}
+  .reading-note h2{font-size:24px}
+  .reading-note>p:not(.note-source){font-size:15px}
   .site-footer{margin-top:65px;padding-top:21px;gap:20px;font-size:10px}
   .footer-links{gap:15px}
   .site-footer button{font-size:9px}
 }
-@media(max-width:360px){nav{gap:13px;font-size:10px}.home-intro h1{font-size:65px;letter-spacing:-4px}.footer-links{gap:12px}.site-footer{gap:10px}}
+@media(max-width:360px){nav{gap:10px;font-size:10px}.home-intro h1{font-size:65px;letter-spacing:-4px}.footer-links{gap:12px}.site-footer{gap:10px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}

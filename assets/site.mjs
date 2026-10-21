@@ -1,4 +1,4 @@
-import { initField } from './field.mjs?v=ff76b54c802c';
+import { initField } from './field.mjs?v=5630aacc7cc9';
 
 const field = document.querySelector('[data-field]');
 if (field) initField(field);
